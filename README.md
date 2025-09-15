@@ -10,7 +10,8 @@ This repository showcases my projects using **Excel**, **SQL**, and **Power BI**
 ### 1️⃣ Excel Project
 - Cleaned and analyzed business data using Excel.
 - Built Pivot Tables and charts to summarize insights.
-- [View Project] Excel-Project/README.md
+- [View Project] (Excel-Project/README.md)
+
 
 ### 2️⃣ SQL Project
 - Designed database schema and wrote advanced SQL queries (joins, aggregations).
