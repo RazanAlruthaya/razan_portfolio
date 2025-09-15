@@ -22,7 +22,8 @@ JOIN grades ON students.id = grades.student_id;
 | Saleh  | 96    |
 
 ## Download
-[📥 Download SQL File](https://raw.githubusercontent.com/RazanAlruthaya/data-analysis-portfolio/main/SQL-Project/students_grades_query.sql)
+[📥 Download SQL File](https://raw.githubusercontent.com/RazanAlruthaya/razan_portfolio/main/SQL-Project/students_grades_query.sql)
+
 
 
 **Tools Used**  
