@@ -32,7 +32,7 @@ This repository showcases my projects using **Excel**, **SQL**, and **Power BI**
 ## 🛠️ Tools & Skills
 - Excel: Data cleaning, Pivot Tables, dashboards  
 - SQL: Joins, subqueries, database design  
-- Power BI: DAX, data modeling, interactive dashboards  
+- Power BI: Data analysis, data modeling, interactive dashboards  
 
 ---
 
