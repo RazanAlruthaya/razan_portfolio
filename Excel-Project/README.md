@@ -37,4 +37,6 @@ Microsoft Excel
 Pivot Tables and Pivot Charts
 
 Data cleaning and formatting techniques
+## 📂 Download the Excel File
+[Car Inventory Analysis.xlsx](Car%20Inventory%20analysis.xlsx)
 
