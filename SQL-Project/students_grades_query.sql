@@ -1,0 +1,2 @@
+SELECT students.name, grades.score FROM students
+JOIN grades ON students.id= grades.student_id;
