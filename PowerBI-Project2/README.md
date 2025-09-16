@@ -16,7 +16,6 @@ Build an interactive dashboard focusing on clean data and meaningful visuals.
 
 **Screenshots**
 ![Dashboard page 1](./screenshots/page1.png)
-![Dashboard page 2](./screenshots/page2.png)
 
 **Tools Used**
 - Microsoft Power BI
