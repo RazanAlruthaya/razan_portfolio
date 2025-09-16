@@ -4,7 +4,6 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>رزان عبدالله الرثيع | Data Analysis Portfolio</title>
-
 <style>
 :root{
   --bg:#ffffff; --bg2:#f5f3fa;
@@ -13,68 +12,60 @@
   --accent:#BD3978; --accent2:#C480A7;
 }
 *{box-sizing:border-box}
-body{
-  margin:0; font-family:"Tajawal","Cairo",system-ui,-apple-system,Segoe UI,Arial,sans-serif;
-  color:var(--text); background:linear-gradient(180deg,var(--bg) 0%, var(--bg2) 100%);
-}
+body{margin:0;font-family:"Tajawal","Cairo",system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+     color:var(--text);background:linear-gradient(180deg,var(--bg) 0%, var(--bg2) 100%)}
 a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
 
-
-#sql-card-ar img,
-#sql-card-en img{
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: contain !important;  /* اعرض الصورة كاملة بدون قص */
-  background: #fff;                /* خلفية بيضاء حول الصورة عند التناسب */
-}
-
-
-/* Header / Nav */
-header{position:sticky; top:0; z-index:10; background:rgba(255,255,255,.95);
-       border-bottom:1px solid var(--stroke); backdrop-filter:saturate(180%) blur(10px)}
-.nav{max-width:1100px; margin:auto; padding:14px 20px; display:flex; align-items:center; justify-content:space-between}
-.brand{display:flex; align-items:center; gap:10px}
+/* Header */
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);
+       border-bottom:1px solid var(--stroke);backdrop-filter:saturate(180%) blur(10px)}
+.nav{max-width:1100px;margin:auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px}
 .brand img{height:40px}
-.nav a{margin-inline:10px; font-weight:700}
-.lang-switch{display:flex; gap:8px}
-.lang-switch button{border:none; border-radius:8px; padding:6px 12px; cursor:pointer; font-weight:800; color:#fff; background:var(--accent)}
+.nav a{margin-inline:10px;font-weight:700}
+.lang-switch{display:flex;gap:8px}
+.lang-switch button{border:none;border-radius:8px;padding:6px 12px;cursor:pointer;font-weight:800;color:#fff;background:var(--accent)}
 .lang-switch button.secondary{background:var(--accent2)}
 
 /* Layout */
-.container{max-width:1100px; margin:0 auto; padding:28px 20px}
-.section-title{font-size:28px; margin:32px 0 14px; color:#3F213F}
-.card{background:var(--card); border:1px solid var(--stroke); border-radius:16px; padding:18px}
+.container{max-width:1100px;margin:0 auto;padding:28px 20px}
+.section-title{font-size:28px;margin:32px 0 14px;color:#3F213F}
+.card{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:18px}
 .muted{color:var(--muted)}
 
 /* Hero */
-.hero h1{font-size:38px; margin:0 0 10px}
-.hero p{font-size:18px; color:var(--muted); margin:0}
-.badges span{display:inline-block; background:#ece9f8; border:1px solid var(--stroke); padding:6px 10px; border-radius:999px; margin:4px}
+.hero h1{font-size:38px;margin:0 0 10px}
+.hero p{font-size:18px;color:var(--muted);margin:0}
+.badges span{display:inline-block;background:#ece9f8;border:1px solid var(--stroke);padding:6px 10px;border-radius:999px;margin:4px}
 
 /* Skills */
-.skills-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
-.skill{background:#F7F6FD; border:1px solid var(--stroke); border-radius:14px; padding:14px; text-align:center; font-weight:700}
-.skill small{display:block; color:var(--muted); font-weight:600; margin-top:6px}
+.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.skill{background:#F7F6FD;border:1px solid var(--stroke);border-radius:14px;padding:14px;text-align:center;font-weight:700}
+.skill small{display:block;color:var(--muted);font-weight:600;margin-top:6px}
 @media (max-width:1000px){.skills-grid{grid-template-columns:repeat(2,1fr)}}
 
 /* Projects */
-.projects{display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 @media (max-width:900px){.projects{grid-template-columns:1fr}}
-.project-card{background:var(--card); border:1px solid var(--stroke); border-radius:16px; overflow:hidden}
-.shot-wrap{aspect-ratio:16/9; overflow:hidden; background:#fff; border-bottom:1px solid var(--stroke)}
-.project-card img{width:100%; height:100%; object-fit:cover; display:block}
+.project-card{background:var(--card);border:1px solid var(--stroke);border-radius:16px;overflow:hidden}
+.shot-wrap{aspect-ratio:16/9;overflow:hidden;background:#fff;border-bottom:1px solid var(--stroke)}
+.project-card img{width:100%;height:100%;object-fit:cover;display:block}
 .project-body{padding:14px}
-.project-title{margin:6px 0 4px; font-size:18px}
-.project-desc{margin:0; color:var(--muted)}
+.project-title{margin:6px 0 4px;font-size:18px}
+.project-desc{margin:0;color:var(--muted)}
 
 /* Contact */
-footer{border-top:1px solid var(--stroke); margin-top:28px}
-.cta{display:flex; gap:10px; flex-wrap:wrap}
-.btn{display:inline-block; background:var(--accent); color:#fff; padding:10px 16px; border-radius:12px; font-weight:800}
+footer{border-top:1px solid var(--stroke);margin-top:28px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:12px;font-weight:800}
 .btn.alt{background:var(--accent2)}
 
 /* Helpers */
 .hidden{display:none}
+
+/* Bigger SQL image (both languages) */
+#sql-card-ar .shot-wrap, #sql-card-en .shot-wrap{aspect-ratio:auto !important;height:320px !important}
+#sql-card-ar img, #sql-card-en img{width:100% !important;height:100% !important;object-fit:contain !important;background:#fff}
 </style>
 </head>
 <body>
@@ -86,10 +77,10 @@ footer{border-top:1px solid var(--stroke); margin-top:28px}
       <strong id="brand-name">رزان عبدالله الرثيع</strong>
     </div>
     <div>
-      <a href="#about" id="nav-about">نبذة</a>
-      <a href="#skills" id="nav-skills">المهارات</a>
+      <a href="#about"    id="nav-about">نبذة</a>
+      <a href="#skills"   id="nav-skills">المهارات</a>
       <a href="#projects" id="nav-projects">المشاريع</a>
-      <a href="#contact" id="nav-contact">تواصل</a>
+      <a href="#contact"  id="nav-contact">تواصل</a>
     </div>
     <div class="lang-switch">
       <button id="btn-ar">عربي</button>
@@ -100,25 +91,20 @@ footer{border-top:1px solid var(--stroke); margin-top:28px}
 
 <main class="container">
 
-  <!-- ========== Arabic content ========== -->
+  <!-- ========== ARABIC ========== -->
   <div id="ar-content">
-    <!-- Hero -->
     <section id="about" class="hero">
       <h1>محفظة أعمال تحليل البيانات</h1>
       <p>
         أنا <strong>رزان عبدالله الرثيع</strong>، خريجة <strong>إدارة أعمال</strong> من جامعة القصيم
-        (تقدير <strong>4.63/5</strong> – مرتبة الشرف الثانية). لدي أساس قوي في الاستراتيجية،
-        التسويق، الإدارة والتحليل المالي، مع اهتمام عميق بتحويل البيانات إلى رؤى قابلة للتنفيذ عبر
-        <strong>Excel</strong> و<strong>SQL</strong> و<strong>Power BI</strong>. عملت على مشاريع أكاديمية
-        شملت تحليل استراتيجيات الشركات ودراسات سوق ومسوح إحصائية باستخدام SPSS، وقدّمت توصيات عملية لتحسين الأداء.
-        أطمح للانضمام إلى فرق تصنع القرارات بالبيانات وتقدّم قيمة واضحة للأعمال.
+        (تقدير <strong>4.63/5</strong> – مرتبة الشرف الثانية). أحوّل البيانات إلى رؤى قابلة للتنفيذ باستخدام
+        <strong>Excel</strong> و<strong>SQL</strong> و<strong>Power BI</strong>. أنجزت مشروعات أكاديمية وبحثية
+        مثل دراسات سوق وتحليل استبيانات (SPSS)، وأستمتع ببناء لوحات معلومات تدعم اتخاذ القرار.
       </p>
       <div class="badges" style="margin-top:12px">
         <span>Excel</span><span>SQL</span><span>Power BI</span><span>SPSS</span><span>KPI Design</span>
       </div>
     </section>
-
-    <!-- Skills -->
 
     <h2 id="skills" class="section-title">المهارات</h2>
     <div class="card">
@@ -132,8 +118,6 @@ footer{border-top:1px solid var(--stroke); margin-top:28px}
         <div class="skill">Market Research<small>استبيانات • تحليل</small></div>
         <div class="skill">Project Mgmt<small>Agile • CAPM</small></div>
         <div class="skill">Presentation<small>Storytelling</small></div>
-
-
       </div>
 
       <h3 style="margin-top:20px">Soft Skills</h3>
@@ -149,14 +133,13 @@ footer{border-top:1px solid var(--stroke); margin-top:28px}
       </div>
     </div>
 
-    <!-- Projects -->
     <h2 id="projects" class="section-title">المشاريع</h2>
     <div class="projects">
       <article class="project-card">
         <div class="shot-wrap"><img src="assets/pbi1.png" alt="Power BI dashboard 1"></div>
         <div class="project-body">
           <h3 class="project-title">Power BI — لوحة مبيعات (1)</h3>
-          <p class="project-desc">مؤشرات رئيسية، مقارنة حسب الفئات، وفلاتر تفاعلية لاتخاذ قرار أسرع.</p>
+          <p class="project-desc">مؤشرات رئيسية ومقارنات وفلاتر تفاعلية.</p>
         </div>
       </article>
 
@@ -164,7 +147,7 @@ footer{border-top:1px solid var(--stroke); margin-top:28px}
         <div class="shot-wrap"><img src="assets/pbi2.png" alt="Power BI dashboard 2"></div>
         <div class="project-body">
           <h3 class="project-title">Power BI — لوحة مبيعات (2)</h3>
-          <p class="project-desc">تحليل الوحدات المباعة حسب المدن والمنتجات مع رسوم نصف دائرية ومخططات شريطية.</p>
+          <p class="project-desc">تفصيل حسب المدن والمنتجات مع رسوم متنوعة.</p>
         </div>
       </article>
 
@@ -172,24 +155,20 @@ footer{border-top:1px solid var(--stroke); margin-top:28px}
         <div class="shot-wrap"><img src="assets/excel.png" alt="Excel dashboard"></div>
         <div class="project-body">
           <h3 class="project-title">Excel — مخزون السيارات</h3>
-          <p class="project-desc">Pivot + PowerQuery لتجميع البيانات وعرض لوحة موجزة للألوان والموديلات والأسعار.</p>
+          <p class="project-desc">Pivot + PowerQuery ولوحة مؤشرات مختصرة.</p>
         </div>
       </article>
 
-<article class="project-card" id="sql-card-ar">
-  <div class="shot-wrap">
-    <img src="assets/sql.png" alt="SQL result">
-  </div>
-  <div class="project-body">
-    <h3 class="project-title">SQL — درجات الطلاب</h3>
-    <p class="project-desc">استعلام JOIN لربط الطلاب بالدرجات واستخراج نتائج قابلة للتقارير.</p>
-  </div>
-</article>
+      <!-- SQL bigger -->
+      <article class="project-card" id="sql-card-ar">
+        <div class="shot-wrap"><img src="assets/sql.png" alt="SQL result"></div>
+        <div class="project-body">
+          <h3 class="project-title">SQL — درجات الطلاب</h3>
+          <p class="project-desc">JOIN لربط الطلاب بالدرجات واستخراج نتائج للتقارير.</p>
+        </div>
+      </article>
+    </div>
 
-
-
-
-    <!-- Contact (last) -->
     <h2 id="contact" class="section-title">تواصل</h2>
     <div class="card">
       <p class="muted">يسعدني التواصل بخصوص فرص العمل أو التعاون.</p>
@@ -200,100 +179,93 @@ footer{border-top:1px solid var(--stroke); margin-top:28px}
     </div>
   </div>
 
- <!-- ========== English content ========== -->
-<div id="en-content" class="hidden">
-  <!-- Hero -->
-  <section id="about-en" class="hero">
-    <h1>Data Analysis Portfolio</h1>
-    <p>
-      I’m <strong>Razan Abdullah Alruthaya</strong>, a Business Administration graduate from Qassim University
-      (GPA <strong>4.63/5</strong>, Second-Class Honors). I turn data into actionable insights using
-      <strong>Excel</strong>, <strong>SQL</strong>, and <strong>Power BI</strong>. I’ve worked on academic and
-      research projects including market studies and survey analytics (SPSS), and I enjoy building user-centric,
-      decision-support dashboards.
-    </p>
-    <div class="badges" style="margin-top:12px">
-      <span>Excel</span><span>SQL</span><span>Power BI</span><span>SPSS</span><span>KPI Design</span>
+  <!-- ========== ENGLISH ========== -->
+  <div id="en-content" class="hidden">
+    <section id="about-en" class="hero">
+      <h1>Data Analysis Portfolio</h1>
+      <p>
+        I’m <strong>Razan Abdullah Alruthaya</strong>, a Business Administration graduate (GPA <strong>4.63/5</strong>,
+        Second-Class Honors). I turn data into actionable insights using <strong>Excel</strong>, <strong>SQL</strong>, and
+        <strong>Power BI</strong>. I’ve worked on academic/research projects (market studies, SPSS surveys) and enjoy
+        building decision-support dashboards.
+      </p>
+      <div class="badges" style="margin-top:12px">
+        <span>Excel</span><span>SQL</span><span>Power BI</span><span>SPSS</span><span>KPI Design</span>
+      </div>
+    </section>
+
+    <h2 id="skills-en" class="section-title">Skills</h2>
+    <div class="card">
+      <h3 style="margin-top:0">Technical Skills</h3>
+      <div class="skills-grid" style="margin-top:12px">
+        <div class="skill">Excel<small>Pivot • PowerQuery</small></div>
+        <div class="skill">SQL<small>JOIN • CTE</small></div>
+        <div class="skill">Power BI<small>DAX • Visualization</small></div>
+        <div class="skill">SPSS<small>Survey Analytics</small></div>
+        <div class="skill">Financial Analysis<small>Ratios • Reporting</small></div>
+        <div class="skill">Market Research<small>Surveys • Analysis</small></div>
+        <div class="skill">Project Mgmt<small>Agile • CAPM</small></div>
+        <div class="skill">Presentation<small>Storytelling</small></div>
+      </div>
+
+      <h3 style="margin-top:20px">Soft Skills</h3>
+      <div class="skills-grid" style="margin-top:12px">
+        <div class="skill">Communication<small>Written & Verbal</small></div>
+        <div class="skill">Time Management</div>
+        <div class="skill">Problem Solving</div>
+        <div class="skill">Team Leadership</div>
+        <div class="skill">Decision Making</div>
+        <div class="skill">Teamwork</div>
+        <div class="skill">Strategic Planning</div>
+        <div class="skill">Attention to Detail</div>
+      </div>
     </div>
-  </section>
 
-  <!-- Skills -->
-  <h2 id="skills-en" class="section-title">Skills</h2>
-  <div class="card">
-    <h3 style="margin-top:0">Technical Skills</h3>
-    <div class="skills-grid" style="margin-top:12px">
-      <div class="skill">Excel<small>Pivot • PowerQuery</small></div>
-      <div class="skill">SQL<small>JOIN • CTE</small></div>
-      <div class="skill">Power BI<small>DAX • Visualization</small></div>
-      <div class="skill">SPSS<small>Survey Analytics</small></div>
-      <div class="skill">Financial Analysis<small>Ratios • Reporting</small></div>
-      <div class="skill">Market Research<small>Surveys • Analysis</small></div>
-      <div class="skill">Project Mgmt<small>Agile • CAPM</small></div>
-      <div class="skill">Presentation<small>Storytelling</small></div>
+    <h2 id="projects-en" class="section-title">Projects</h2>
+    <div class="projects">
+      <article class="project-card">
+        <div class="shot-wrap"><img src="assets/pbi1.png" alt="Power BI dashboard 1"></div>
+        <div class="project-body">
+          <h3 class="project-title">Power BI — Sales Dashboard (1)</h3>
+          <p class="project-desc">KPIs, comparisons, and interactive filters.</p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="shot-wrap"><img src="assets/pbi2.png" alt="Power BI dashboard 2"></div>
+        <div class="project-body">
+          <h3 class="project-title">Power BI — Sales Dashboard (2)</h3>
+          <p class="project-desc">City/product breakdown with donut & bar charts.</p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="shot-wrap"><img src="assets/excel.png" alt="Excel dashboard"></div>
+        <div class="project-body">
+          <h3 class="project-title">Excel — Car Inventory</h3>
+          <p class="project-desc">Pivot & PowerQuery with concise KPIs.</p>
+        </div>
+      </article>
+
+      <!-- SQL bigger -->
+      <article class="project-card" id="sql-card-en">
+        <div class="shot-wrap"><img src="assets/sql.png" alt="SQL result"></div>
+        <div class="project-body">
+          <h3 class="project-title">SQL — Student Grades</h3>
+          <p class="project-desc">JOIN query linking students and grades for reporting.</p>
+        </div>
+      </article>
     </div>
 
-    <h3 style="margin-top:20px">Soft Skills</h3>
-    <div class="skills-grid" style="margin-top:12px">
-      <div class="skill">Communication<small>Written & Verbal</small></div>
-      <div class="skill">Time Management</div>
-      <div class="skill">Problem Solving</div>
-      <div class="skill">Team Leadership</div>
-      <div class="skill">Decision Making</div>
-      <div class="skill">Teamwork</div>
-      <div class="skill">Strategic Planning</div>
-      <div class="skill">Attention to Detail</div>
-    </div>
-  </div>
-
-  <!-- Projects -->
-  <h2 id="projects-en" class="section-title">Projects</h2>
-  <div class="projects">
-    <article class="project-card">
-      <div class="shot-wrap"><img src="assets/pbi1.png" alt="Power BI dashboard 1"></div>
-      <div class="project-body">
-        <h3 class="project-title">Power BI — Sales Dashboard (1)</h3>
-        <p class="project-desc">KPIs, category comparisons, and interactive filters for faster decisions.</p>
+    <h2 id="contact-en" class="section-title">Contact</h2>
+    <div class="card">
+      <p class="muted">Open to full/part-time roles and collaborations.</p>
+      <div class="cta">
+        <a class="btn" href="mailto:razanalruthaya@outlook.com">razanalruthaya@outlook.com</a>
+        <a class="btn alt" href="https://www.linkedin.com/in/razanalruthaya" target="_blank" rel="noopener">LinkedIn</a>
       </div>
-    </article>
-
-    <article class="project-card">
-      <div class="shot-wrap"><img src="assets/pbi2.png" alt="Power BI dashboard 2"></div>
-      <div class="project-body">
-        <h3 class="project-title">Power BI — Sales Dashboard (2)</h3>
-        <p class="project-desc">City/product breakdown with donut and bar charts.</p>
-      </div>
-    </article>
-
-    <article class="project-card">
-      <div class="shot-wrap"><img src="assets/excel.png" alt="Excel dashboard"></div>
-      <div class="project-body">
-        <h3 class="project-title">Excel — Car Inventory</h3>
-        <p class="project-desc">Pivot & PowerQuery aggregation with concise KPIs.</p>
-      </div>
-    </article>
-
-    <!-- SQL card: bigger & clear -->
-    <article class="project-card" id="sql-card-en">
-      <div class="shot-wrap">
-        <img src="assets/sql.png" alt="SQL result">
-      </div>
-      <div class="project-body">
-        <h3 class="project-title">SQL — Student Grades</h3>
-        <p class="project-desc">JOIN query linking students and grades for reporting.</p>
-      </div>
-    </article>
-  </div>
-
-  <!-- Contact -->
-  <h2 id="contact-en" class="section-title">Contact</h2>
-  <div class="card">
-    <p class="muted">Open to full/part-time roles and collaborations.</p>
-    <div class="cta">
-      <a class="btn" href="mailto:razanalruthaya@outlook.com">razanalruthaya@outlook.com</a>
-      <a class="btn alt" href="https://www.linkedin.com/in/razanalruthaya" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
-</div>
 
   <footer class="container" style="text-align:center">
     <p class="muted" style="margin:18px 0">© <span id="y"></span> رزان عبدالله الرثيع — Razan Abdullah Alruthaya</p>
@@ -322,43 +294,32 @@ function applyLang(lang){
   el.en.classList.toggle('hidden', isAr);
 
   // labels
-  el.brand.textContent      = isAr ? 'رزان عبدالله الرثيع' : 'Razan Abdullah Alruthaya';
-  el.navAbout.textContent   = isAr ? 'نبذة'     : 'About';
-  el.navSkills.textContent  = isAr ? 'المهارات' : 'Skills';
-  el.navProjects.textContent= isAr ? 'المشاريع' : 'Projects';
-  el.navContact.textContent = isAr ? 'تواصل'    : 'Contact';
+  el.brand.textContent       = isAr ? 'رزان عبدالله الرثيع' : 'Razan Abdullah Alruthaya';
+  el.navAbout.textContent    = isAr ? 'نبذة'     : 'About';
+  el.navSkills.textContent   = isAr ? 'المهارات' : 'Skills';
+  el.navProjects.textContent = isAr ? 'المشاريع' : 'Projects';
+  el.navContact.textContent  = isAr ? 'تواصل'    : 'Contact';
 
-  // hrefs (توجيه الروابط للقسم الصحيح)
+  // anchors to correct section
   el.navAbout.href    = isAr ? '#about'      : '#about-en';
   el.navSkills.href   = isAr ? '#skills'     : '#skills-en';
   el.navProjects.href = isAr ? '#projects'   : '#projects-en';
   el.navContact.href  = isAr ? '#contact'    : '#contact-en';
 
-  // active style
   el.btnAr.classList.toggle('secondary', !isAr);
   el.btnEn.classList.toggle('secondary', isAr);
 
   localStorage.setItem('lang', lang);
 }
-
 el.btnAr.onclick = () => applyLang('ar');
 el.btnEn.onclick = () => applyLang('en');
 applyLang(localStorage.getItem('lang') || 'ar');
-
-// SQL image size rules (keep)
-document.head.insertAdjacentHTML('beforeend', `
-  <style>
-    #sql-card-ar .shot-wrap, #sql-card-en .shot-wrap { aspect-ratio:auto !important; height:320px !important; }
-    #sql-card-ar img, #sql-card-en img { width:100% !important; height:100% !important; object-fit:contain !important; background:#fff; }
-  </style>
-`);
 document.getElementById('y').textContent = new Date().getFullYear();
 </script>
 
-
-
 </body>
 </html>
+
 
 
 
