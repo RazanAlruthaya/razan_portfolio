@@ -1,70 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>razan abdullah alruthaya — Data Analysis Portfolio</title>
+  <title>رزان عبدالله الرثيع — Data Analysis Portfolio | Razan Abdullah Alruthaya</title>
 
-  <!-- Social preview (اختياري) -->
-  <meta property="og:title" content="razan abdullah alruthaya — Data Analysis Portfolio" />
-  <meta property="og:description" content="Excel • SQL • Power BI — selected projects, skills, and contact." />
-  <meta property="og:image" content="assets/screenshot2.png" />
+  <!-- Social preview -->
+  <meta property="og:title" content="رزان عبدالله الرثيع — Data Analysis Portfolio" />
+  <meta property="og:description" content="Excel • SQL • Power BI — مشاريع مختارة، المهارات، ووسائل التواصل." />
+  <meta property="og:image" content="Screenshot2.png" />
   <meta property="og:url" content="https://razanalruthaya.github.io/razan_portfolio/" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <style>
-    /* ألوان من ثيمك الوردي */
+    /* لوحة الألوان (من ثيمك) */
     :root{
-      --bg:#FFFFFF;              /* خلفية */
-      --bg-alt:#EBE8FA;          /* خلفية فاتحة */
-      --card:#F7F6FD;            /* بطاقات */
-      --stroke:#CBC8E2;          /* حدود ناعمة */
-      --text:#192229;            /* نص */
-      --muted:#716E76;           /* نص ثانوي */
+      --bg:#FFFFFF;
+      --bg-alt:#EBE8FA;
+      --card:#F7F6FD;
+      --stroke:#CBC8E2;
+      --text:#192229;
+      --muted:#716E76;
       --muted2:#96939E;
-      --accent:#BD3978;          /* وردي أساسي */
-      --accent2:#C480A7;         /* وردي فاتح */
+      --accent:#BD3978;
+      --accent2:#C480A7;
     }
     *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--text);
-      background:linear-gradient(180deg,var(--bg) 0%, var(--bg-alt) 100%);}
-    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+    body{
+      margin:0; font-family: "Tajawal", "Cairo", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+      color:var(--text); background:linear-gradient(180deg,var(--bg) 0%, var(--bg-alt) 100%);
+    }
+    a{ color:var(--accent); text-decoration:none }
+    a:hover{ text-decoration:underline }
 
-    /* رأس الصفحة */
+    /* شريط علوي */
     .topbar{height:6px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
-    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.9);
-      backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--stroke)}
-    .nav{max-width:1100px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:10px}
-    .brand img{height:34px} @media(max-width:900px){.brand img{height:28px}}
-    .nav a{margin-left:16px;font-weight:600}
 
-    /* الحاوية العامة */
-    .container{max-width:1100px;margin:0 auto;padding:28px 20px}
+    /* الهيدر */
+    header{ position:sticky; top:0; z-index:10; background:rgba(255,255,255,.92);
+      backdrop-filter:saturate(180%) blur(10px); border-bottom:1px solid var(--stroke) }
+    .nav{ max-width:1100px; margin:auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between }
+    .brand{ display:flex; align-items:center; gap:10px; }
+    .brand img{ height:34px } @media (max-width:900px){ .brand img{ height:28px } }
+    .nav a{ margin-inline:8px; font-weight:700 }
+
+    .container{ max-width:1100px; margin:0 auto; padding:28px 20px }
 
     /* البطل */
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center;padding-top:34px}
-    @media(max-width:900px){.hero{grid-template-columns:1fr}}
-    .hero h1{font-size:42px;line-height:1.1;margin:0 0 10px}
-    .hero p{color:var(--muted);margin:0 0 20px}
-    .btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:12px;font-weight:700}
-    .btn.secondary{background:var(--accent2)}
-    .badge{display:inline-block;background:#E9E7F8;color:var(--text);border:1px solid var(--stroke);
-      padding:6px 10px;border-radius:999px;font-size:12px;margin-right:6px}
+    .hero{ display:grid; grid-template-columns:1.1fr .9fr; gap:24px; align-items:center; padding-top:34px }
+    @media (max-width:900px){ .hero{ grid-template-columns:1fr } }
+    .hero h1{ font-size:40px; line-height:1.15; margin:0 0 10px }
+    .hero p{ color:var(--muted); margin:0 0 18px; font-size:18px }
+    .btn{ display:inline-block; background:var(--accent); color:#fff; padding:10px 16px; border-radius:12px; font-weight:800 }
+    .btn.secondary{ background:var(--accent2) }
+    .badge{ display:inline-block; background:#E9E7F8; color:var(--text); border:1px solid var(--stroke);
+      padding:6px 10px; border-radius:999px; font-size:12px; margin-left:6px }
 
-    /* عناوين الأقسام والبطاقات */
-    .section-title{font-size:28px;margin:34px 0 14px;color:#3F213F}
-    .card{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:18px}
-    .muted{color:var(--muted)} .muted2{color:var(--muted2)}
+    .section-title{ font-size:26px; margin:34px 0 14px; color:#3F213F }
+    .card{ background:var(--card); border:1px solid var(--stroke); border-radius:16px; padding:18px }
+    .muted{ color:var(--muted) } .muted2{ color:var(--muted2) }
 
-    /* الشبكات */
-    .grid{display:grid;gap:18px}
-    .cards-2{grid-template-columns:repeat(2,1fr)}
-    @media(max-width:900px){.cards-2{grid-template-columns:1fr}}
-    .shot{width:100%;border-radius:12px;border:1px solid var(--stroke)}
+    .grid{ display:grid; gap:18px }
+    .cards-2{ grid-template-columns:repeat(2,1fr) }
+    @media (max-width:900px){ .cards-2{ grid-template-columns:1fr } }
+    .shot{ width:100%; border-radius:12px; border:1px solid var(--stroke) }
 
-    footer{border-top:1px solid var(--stroke);margin-top:28px}
-    .arabic{direction:rtl;text-align:right}
+    footer{ border-top:1px solid var(--stroke); margin-top:28px; padding-top:8px }
+    /* نسخة إنجليزية من اليسار لليمين */
+    .ltr{ direction:ltr; text-align:left }
   </style>
 </head>
 <body>
@@ -75,32 +78,32 @@
   <header>
     <nav class="nav">
       <div class="brand">
-        <!-- إن كان لديك شعار assets/logo.png سيظهر هنا؛ وإلا سيظهر النص -->
-        <img src="assets/logo.png" alt="logo" onerror="this.style.display='none'">
-        <strong style="color:var(--accent)">Razan Alruthaya</strong>
+        <!-- شعار اختياري -->
+        <img src="logo.png" alt="Logo" onerror="this.style.display='none'">
+        <strong style="color:var(--accent)">رزان عبدالله الرثيع</strong>
       </div>
       <div>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">من أنا</a>
+        <a href="#skills">المهارات</a>
+        <a href="#projects">المشاريع</a>
+        <a href="#contact">تواصل</a>
       </div>
     </nav>
   </header>
 
   <main class="container">
 
-    <!-- HERO -->
+    <!-- القسم الافتتاحي -->
     <section class="hero" id="home">
       <div>
-        <h1>Data Analysis Portfolio</h1>
+        <h1>محفظة أعمال تحليل البيانات</h1>
         <p>
-          I’m <strong>razan abdullah alruthaya</strong> — a <strong>Business Administration graduate</strong>
-          turning data into decisions with <strong>Excel</strong>, <strong>SQL</strong>, and <strong>Power BI</strong>.
-          Reach me at <a href="mailto:razanalruthaya@outlook.com">razanalruthaya@outlook.com</a>.
+          أنا <strong>رزان عبدالله الرثيع</strong>، خريجة <strong>إدارة أعمال</strong>، أعمل على تحويل البيانات إلى قرارات باستخدام
+          <strong>Excel</strong> و<strong>SQL</strong> و<strong>Power&nbsp;BI</strong>.
+          للتواصل: <a href="mailto:razanalruthaya@outlook.com">razanalruthaya@outlook.com</a>
         </p>
-        <a class="btn" href="#projects">See Projects</a>
-        <a class="btn secondary" style="margin-left:8px" href="#contact">Contact</a>
+        <a class="btn" href="#projects">عرض المشاريع</a>
+        <a class="btn secondary" style="margin-inline-start:8px" href="#contact">تواصل معي</a>
         <div style="margin-top:12px">
           <span class="badge">Excel</span>
           <span class="badge">SQL</span>
@@ -108,91 +111,89 @@
         </div>
       </div>
       <div>
-        <!-- لو عندك كفر عام ضعيه هنا -->
-        <img class="shot" src="assets/screenshot2.png" alt="featured cover">
+        <img class="shot" src="Screenshot2.png" alt="Featured dashboard">
       </div>
     </section>
 
-    <!-- ABOUT EN -->
-    <h2 class="section-title" id="about">About</h2>
+    <!-- نبذة عربية -->
+    <h2 class="section-title" id="about">من أنا</h2>
     <div class="card">
-      <p>
-        Business Administration graduate focused on data cleaning, clear SQL, and intuitive Power BI visuals.
-        I enjoy building dashboards that help teams make better decisions.
+      <p class="muted">
+        أهتم بتنظيف البيانات، وكتابة استعلامات SQL واضحة، وتصميم لوحات تفاعلية في Power&nbsp;BI تُسهل اتخاذ القرار.
+        مقرّي الرياض، المملكة العربية السعودية.
       </p>
-      <p class="muted">Riyadh, KSA • <a href="mailto:razanalruthaya@outlook.com">razanalruthaya@outlook.com</a> •
-        <a href="https://github.com/RazanAlruthaya" target="_blank" rel="noopener">GitHub</a></p>
+      <p>البريد: <a href="mailto:razanalruthaya@outlook.com">razanalruthaya@outlook.com</a></p>
     </div>
 
-    <!-- ABOUT AR -->
-    <div class="card arabic" style="margin-top:12px">
-      <p>أنا <strong>razan abdullah alruthaya</strong>، خريجة إدارة أعمال مهتمة بتحليل البيانات
-        وبناء لوحات معلومات باستخدام Excel وSQL وPower BI.</p>
-      <p class="muted">الرياض • <a href="mailto:razanalruthaya@outlook.com">razanalruthaya@outlook.com</a></p>
+    <!-- نبذة إنجليزية (اسم إنجليزي بحروف Capital كما طلبتِ) -->
+    <div class="card ltr" style="margin-top:12px">
+      <p>
+        I am <strong>Razan Abdullah Alruthaya</strong>, a Business Administration graduate focusing on data cleaning,
+        clear SQL, and intuitive Power BI visuals that support decision-making.
+      </p>
+      <p class="muted">Riyadh, KSA • <a href="mailto:razanalruthaya@outlook.com">razanalruthaya@outlook.com</a></p>
     </div>
 
-    <!-- SKILLS -->
-    <h2 class="section-title" id="skills">Skills</h2>
+    <!-- المهارات -->
+    <h2 class="section-title" id="skills">المهارات</h2>
     <div class="grid cards-2">
       <div class="card">
-        <h3>Technical</h3>
-        <p class="muted">Excel (Pivot, PowerQuery), SQL (JOINs, CTEs), Power BI (DAX basics), Visualization</p>
+        <h3>تقنية</h3>
+        <p class="muted">Excel (Pivot, PowerQuery)، SQL (JOINs, CTEs)، Power BI (DAX basics)، Visualization</p>
       </div>
       <div class="card">
-        <h3>Business</h3>
-        <p class="muted">Data cleaning, KPI design, Storytelling, Stakeholder communication</p>
+        <h3>أعمال</h3>
+        <p class="muted">تصميم مؤشرات الأداء، سرد بصري، تواصل مع أصحاب المصلحة</p>
       </div>
     </div>
 
-    <!-- PROJECTS -->
-    <h2 class="section-title" id="projects">Projects</h2>
+    <!-- المشاريع -->
+    <h2 class="section-title" id="projects">المشاريع</h2>
     <div class="grid cards-2">
 
       <article class="card">
-        <img class="shot" src="assets/screenshot1.png" alt="Power BI dashboard 1">
-        <h3 style="margin:12px 0 6px">Power BI — Sales Performance</h3>
-        <p class="muted">Interactive dashboard tracking revenue, quantity and top product lines.</p>
-        <p><a href="PowerBI-Project1/README.md">Repo / details</a></p>
+        <img class="shot" src="screenshot 1.png" alt="Power BI dashboard 1">
+        <h3 style="margin:12px 0 6px">Power BI — تحليل أداء المبيعات</h3>
+        <p class="muted">لوحة تفاعلية لمتابعة الإيرادات والكميات وأفضل المنتجات.</p>
+        <p><a href="PowerBI-Project1/README.md">تفاصيل المشروع</a></p>
       </article>
 
       <article class="card">
-        <img class="shot" src="assets/screenshot2.png" alt="Power BI dashboard 2">
-        <h3 style="margin:12px 0 6px">Power BI — Store Sales</h3>
-        <p class="muted">Comparisons by product & city + KPIs with slicers.</p>
-        <p><a href="PowerBI-Project2/README.md">Repo / details</a></p>
+        <img class="shot" src="Screenshot2.png" alt="Power BI dashboard 2">
+        <h3 style="margin:12px 0 6px">Power BI — متجر المبيعات</h3>
+        <p class="muted">مقارنات حسب المنتج والمدينة مع مؤشرات رئيسية ومرشّحات.</p>
+        <p><a href="PowerBI-Project2/README.md">تفاصيل المشروع</a></p>
       </article>
 
       <article class="card">
-        <img class="shot" src="assets/screenshot3.png" alt="Excel dashboard">
-        <h3 style="margin:12px 0 6px">Excel — Car Inventory Dashboard</h3>
-        <p class="muted">Pivot + Power Query dashboard to monitor inventory KPIs.</p>
-        <p><a href="Excel-Project/README.md">Repo / details</a></p>
+        <img class="shot" src="screenshot3.png" alt="Excel dashboard">
+        <h3 style="margin:12px 0 6px">Excel — لوحة مخزون السيارات</h3>
+        <p class="muted">لوحة عبر Pivot وPower Query لمتابعة مؤشرات المخزون.</p>
+        <p><a href="Excel-Project/README.md">تفاصيل المشروع</a></p>
       </article>
 
       <article class="card">
-        <img class="shot" src="assets/screenshot4.png" alt="SQL result">
-        <h3 style="margin:12px 0 6px">SQL — Students Grades Analysis</h3>
-        <p class="muted">Join students with grades and display results (sample query).</p>
-        <p><a href="SQL-Project/README.md">Repo / details</a></p>
+        <img class="shot" src="Screenshot4.png" alt="SQL result">
+        <h3 style="margin:12px 0 6px">SQL — تحليل درجات الطلاب</h3>
+        <p class="muted">ربط جداول الطلاب والدرجات بعلاقة JOIN وعرض النتائج.</p>
+        <p><a href="SQL-Project/README.md">تفاصيل المشروع</a></p>
       </article>
 
     </div>
 
-    <!-- CONTACT -->
-    <h2 class="section-title" id="contact">Contact</h2>
+    <!-- تواصل -->
+    <h2 class="section-title" id="contact">تواصل</h2>
     <div class="card">
-      <p>Open to full-time/part-time, remote or on-site roles in Riyadh.</p>
+      <p>متاحة لفرص عمل بدوام كامل/جزئي، حضوريًا أو عن بُعد في الرياض.</p>
       <p>📧 <a href="mailto:razanalruthaya@outlook.com">razanalruthaya@outlook.com</a></p>
     </div>
 
     <footer class="container">
-      <p class="muted2">© <span id="y"></span> razan abdullah alruthaya</p>
+      <p class="muted2">© <span id="y"></span> رزان عبدالله الرثيع — Razan Abdullah Alruthaya</p>
     </footer>
   </main>
 
   <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
-
-
 
