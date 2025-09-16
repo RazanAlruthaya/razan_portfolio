@@ -3,52 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Razan Alruthaya — Data Analysis Portfolio</title>
+  <title>razan abdullah alruthaya — Data Analysis Portfolio</title>
 
-  <!-- Open Graph / Twitter cards (لعرض جميل عند مشاركة الرابط) -->
-  <meta property="og:title" content="Razan Alruthaya — Data Analysis Portfolio" />
-  <meta property="og:description" content="Excel • SQL • Power BI — Selected projects, skills, and contact." />
+  <!-- Social preview (اختياري): استبدلي الصورة أدناه إن توفرت -->
+  <meta property="og:title" content="razan abdullah alruthaya — Data Analysis Portfolio" />
+  <meta property="og:description" content="Excel • SQL • Power BI — projects, skills, and contact." />
   <meta property="og:image" content="assets/social-preview.png" />
   <meta property="og:url" content="https://razanalruthaya.github.io/razan_portfolio/" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <style>
-    :root { --bg:#0f1226; --card:#17193a; --text:#f6f7fb; --muted:#aab0d5; --accent:#8b5cf6; }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Arial, sans-serif; color:var(--text); background:linear-gradient(180deg,#0c0f24 0%, #0f1226 100%); }
-    a { color:var(--accent); text-decoration:none; }
-    a:hover { text-decoration:underline; }
-    header { position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px); background:#0f1226cc; border-bottom:1px solid #262a55; z-index:10; }
-    .nav { max-width:1100px; margin:auto; display:flex; align-items:center; justify-content:space-between; padding:12px 20px; }
-    .nav a { margin-left:16px; font-weight:600; }
-    .container { max-width:1100px; margin:0 auto; padding:28px 20px; }
-    .hero { display:grid; grid-template-columns:1.2fr 0.8fr; gap:24px; align-items:center; padding-top:40px; }
-    .hero h1 { font-size:42px; line-height:1.1; margin:0 0 12px; }
-    .hero p { color:var(--muted); margin:0 0 20px; }
-    .btn { display:inline-block; background:var(--accent); color:#fff; padding:10px 16px; border-radius:12px; font-weight:700; }
-    .grid { display:grid; gap:18px; }
-    .cards-3 { grid-template-columns:repeat(3,1fr); }
-    .cards-2 { grid-template-columns:repeat(2,1fr); }
-    @media (max-width:900px){ .hero { grid-template-columns:1fr; } .cards-3 { grid-template-columns:1fr; } .cards-2 { grid-template-columns:1fr; } }
-    .card { background:var(--card); border:1px solid #262a55; border-radius:16px; padding:18px; }
-    .card h3{ margin:0 0 8px; }
-    .muted{ color:var(--muted); }
-    .section-title{ font-size:28px; margin:32px 0 14px; }
-    .skills { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
-    @media (max-width:900px){ .skills{ grid-template-columns:repeat(2,1fr);} }
-    .skill{ background:#141742; border:1px solid #262a55; padding:12px 14px; border-radius:12px; text-align:center; font-weight:600; }
-    footer{ border-top:1px solid #262a55; margin-top:28px; }
-    .arabic{ direction:rtl; text-align:right; }
-    .badge { display:inline-block; background:#1d214d; border:1px solid #2b2f64; padding:4px 8px; border-radius:999px; font-size:12px; margin-right:6px; }
-    img.project-shot{ width:100%; border-radius:12px; border:1px solid #2b2f64; }
+    /* ======= Palette from your dashboard theme ======= */
+    :root{
+      --bg:#FFFFFF;              /* background */
+      --bg-alt:#EBE8FA;          /* backgroundLight */
+      --bg-neutral:#DAD8E8;      /* backgroundNeutral */
+      --text:#192229;            /* foreground */
+      --muted:#716E76;           /* foregroundNeutralSecondary */
+      --muted-2:#96939E;         /* foregroundNeutralTertiary */
+      --accent:#BD3978;          /* tableAccent (pink) */
+      --accent-2:#C480A7;        /* neutral (soft pink) */
+      --card:#F7F6FD;            /* مشتقة من bg-alt أفتح قليلاً */
+      --stroke:#CBC8E2;          /* حد ناعم */
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+      color:var(--text); background:linear-gradient(180deg,var(--bg) 0%, var(--bg-alt) 100%);
+    }
+    a{ color:var(--accent); text-decoration:none }
+    a:hover{ text-decoration:underline }
+    header{
+      position:sticky; top:0; z-index:10; background:rgba(255,255,255,.85);
+      backdrop-filter:saturate(180%) blur(10px); border-bottom:1px solid var(--stroke);
+    }
+    .nav{ max-width:1100px; margin:auto; padding:12px 20px; display:flex; align-items:center; justify-content:space-between }
+    .nav .brand{ font-weight:800; letter-spacing:.3px; color:var(--accent) }
+    .nav a{ margin-left:16px; font-weight:600 }
+
+    .container{ max-width:1100px; margin:0 auto; padding:28px 20px }
+    .hero{ display:grid; grid-template-columns:1.2fr .8fr; gap:24px; align-items:center; padding-top:34px }
+    .hero h1{ font-size:42px; line-height:1.1; margin:0 0 10px }
+    .hero p{ color:var(--muted); margin:0 0 20px }
+    .badge{ display:inline-block; background:var(--bg-neutral); color:var(--text);
+            border:1px solid var(--stroke); padding:6px 10px; border-radius:999px; font-size:12px; margin-right:6px }
+    .btn{ display:inline-block; background:var(--accent); color:#fff; padding:10px 16px; border-radius:12px; font-weight:700 }
+    .btn.secondary{ background:var(--accent-2) }
+
+    .section-title{ font-size:28px; margin:34px 0 14px; color:#3F213F } /* maximum من الثيم */
+    .grid{ display:grid; gap:18px }
+    .cards-3{ grid-template-columns:repeat(3,1fr) }
+    .skills{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px }
+    .skill{ background:var(--card); border:1px solid var(--stroke); padding:12px 14px; border-radius:12px; text-align:center; font-weight:600 }
+    .card{ background:var(--card); border:1px solid var(--stroke); border-radius:16px; padding:18px }
+    .muted{ color:var(--muted) }
+    .muted2{ color:var(--muted-2) }
+    img.shot{ width:100%; border-radius:12px; border:1px solid var(--stroke) }
+
+    footer{ border-top:1px solid var(--stroke); margin-top:28px }
+
+    @media (max-width:900px){
+      .hero{ grid-template-columns:1fr }
+      .cards-3{ grid-template-columns:1fr }
+      .skills{ grid-template-columns:repeat(2,1fr) }
+    }
+
+    /* شريط جانبي رفيع لتمويه الثيم */
+    .accent-bar{ height:6px; background:linear-gradient(90deg, var(--accent), var(--accent-2)) }
+    .arabic{ direction:rtl; text-align:right }
   </style>
 </head>
 <body>
 
+  <div class="accent-bar"></div>
+
   <!-- NAV -->
   <header>
     <nav class="nav">
-      <div style="font-weight:800;">Razan Alruthaya</div>
+      <div class="brand">razaN • portfolio</div>
       <div>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
@@ -64,31 +97,46 @@
     <section class="hero" id="home">
       <div>
         <h1>Data Analysis Portfolio</h1>
-        <p>Business Administration graduate specializing in turning data into decisions using <strong>Excel</strong>, <strong>SQL</strong>, and <strong>Power BI</strong>.</p>
+        <p>
+          I’m <strong>razan abdullah alruthaya</strong> — a Business Administration graduate turning data into decisions using
+          <strong>Excel</strong>, <strong>SQL</strong>, and <strong>Power BI</strong>.
+        </p>
         <a class="btn" href="#projects">See Projects</a>
-        <div style="margin-top:12px;">
+        <a class="btn secondary" style="margin-left:8px" href="#contact">Contact me</a>
+        <div style="margin-top:12px">
           <span class="badge">Excel</span>
           <span class="badge">SQL</span>
           <span class="badge">Power BI</span>
         </div>
       </div>
       <div>
-        <!-- لقطة شاشة رئيسية (اختياري) -->
-        <img class="project-shot" src="assets/cover.png" alt="Portfolio cover (replace with your screenshot)">
+        <img class="shot" src="assets/cover.png" alt="Portfolio cover — replace with your dashboard screenshot">
       </div>
     </section>
 
     <!-- ABOUT (EN) -->
     <h2 class="section-title" id="about">About</h2>
     <div class="card">
-      <p>Hi, I’m <strong>Razan Alruthaya</strong>. I build dashboards and analyses that drive business insights. I enjoy cleaning messy data, writing clear SQL, and visualizing findings in intuitive Power BI reports.</p>
-      <p class="muted">Riyadh, KSA • <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a> • <a href="https://www.linkedin.com/in/YOUR_LINK/">LinkedIn</a> • <a href="https://github.com/RazanAlruthaya">GitHub</a></p>
+      <p>
+        Business Administration graduate focused on data cleaning, clear SQL, and intuitive Power BI visuals.
+        I enjoy building dashboards that help teams make better decisions.
+      </p>
+      <p class="muted">
+        Riyadh, KSA •
+        <a href="mailto:razanalruthaya@outlook.com">razanalruthaya@outlook.com</a> •
+        <a href="https://github.com/RazanAlruthaya" target="_blank" rel="noopener">GitHub</a>
+      </p>
     </div>
 
     <!-- ABOUT (AR) -->
-    <div class="card arabic" style="margin-top:12px;">
-      <p>مرحبًا، أنا <strong>رزان الرثعيا</strong>. أقدّم تحليلات ولوحات معلومات تساعد متخذي القرار. أستمتع بتنظيف البيانات وكتابة استعلامات SQL بوضوح وبناء تقارير Power BI سهلة الفهم.</p>
-      <p class="muted">الرياض • <a href="mailto:YOUR_EMAIL">بريد إلكتروني</a> • <a href="https://www.linkedin.com/in/YOUR_LINK/">لينكدإن</a></p>
+    <div class="card arabic" style="margin-top:12px">
+      <p>
+        أنا <strong>razan abdullah alruthaya</strong>، خريجة إدارة أعمال مهتمة بتحليل البيانات
+        وبناء لوحات معلومات باستخدام Excel وSQL وPower BI.
+      </p>
+      <p class="muted">
+        الرياض • <a href="mailto:razanalruthaya@outlook.com">razanalruthaya@outlook.com</a>
+      </p>
     </div>
 
     <!-- SKILLS -->
@@ -108,34 +156,27 @@
     <h2 class="section-title" id="projects">Projects</h2>
     <div class="grid cards-3">
 
-      <!-- Project 1 -->
       <article class="card">
-        <img class="project-shot" src="assets/pbix-1.png" alt="Power BI dashboard 1">
-        <h3>Power BI — Sales Performance</h3>
-        <p class="muted">Interactive dashboard tracking revenue, quantity, and top product lines. Cleaned data in Power Query and built visuals with slicers.</p>
-        <p>
-          <a href="PowerBI-Project1/README.md">Repo/Details</a> ·
-          <a href="https://app.powerbi.com/" target="_blank" rel="noopener">Live (if published)</a>
+        <img class="shot" src="assets/pbix-1.png" alt="Power BI dashboard 1">
+        <h3 style="margin:8px 0">Power BI — Sales Performance</h3>
+        <p class="muted">
+          Interactive dashboard tracking revenue, quantity and top product lines.
         </p>
-        <p><strong>Stack:</strong> Power BI, Power Query, Excel</p>
+        <p><a href="PowerBI-Project1/README.md">Repo / details</a></p>
       </article>
 
-      <!-- Project 2 -->
       <article class="card">
-        <img class="project-shot" src="assets/sql-1.png" alt="SQL analysis">
-        <h3>SQL — Students Grades Analysis</h3>
-        <p class="muted">Exploratory queries joining students and grades tables. Focus on window functions and performance-friendly indexing.</p>
-        <p><a href="SQL-Project/README.md">Repo/Details</a></p>
-        <p><strong>Stack:</strong> PostgreSQL / SQL</p>
+        <img class="shot" src="assets/sql-1.png" alt="SQL analysis">
+        <h3 style="margin:8px 0">SQL — Students Grades Analysis</h3>
+        <p class="muted">Exploratory queries joining students & grades with window functions.</p>
+        <p><a href="SQL-Project/README.md">Repo / details</a></p>
       </article>
 
-      <!-- Project 3 -->
       <article class="card">
-        <img class="project-shot" src="assets/excel-1.png" alt="Excel dashboard">
-        <h3>Excel — Car Inventory Dashboard</h3>
-        <p class="muted">Cleaned and shaped data with Power Query, built a pivot-driven dashboard to monitor inventory KPIs.</p>
-        <p><a href="Excel-Project/README.md">Repo/Details</a></p>
-        <p><strong>Stack:</strong> Excel, Power Query</p>
+        <img class="shot" src="assets/excel-1.png" alt="Excel dashboard">
+        <h3 style="margin:8px 0">Excel — Car Inventory Dashboard</h3>
+        <p class="muted">Pivot + Power Query dashboard to monitor inventory KPIs.</p>
+        <p><a href="Excel-Project/README.md">Repo / details</a></p>
       </article>
 
     </div>
@@ -143,16 +184,16 @@
     <!-- CONTACT -->
     <h2 class="section-title" id="contact">Contact</h2>
     <div class="card">
-      <p>Open to full-time/part-time and remote or on-site roles in Riyadh.</p>
-      <p>📧 <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a> • 🔗 <a href="https://www.linkedin.com/in/YOUR_LINK/">LinkedIn</a></p>
+      <p>Open to full-time/part-time, remote or on-site roles in Riyadh.</p>
+      <p>📧 <a href="mailto:razanalruthaya@outlook.com">razanalruthaya@outlook.com</a></p>
     </div>
 
     <footer class="container">
-      <p class="muted">© <span id="y"></span> Razan Alruthaya</p>
+      <p class="muted2">© <span id="y"></span> razan abdullah alruthaya</p>
     </footer>
   </main>
 
-  <script> document.getElementById('y').textContent = new Date().getFullYear(); </script>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
 
