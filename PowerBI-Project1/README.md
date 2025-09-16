@@ -15,8 +15,8 @@ Create an interactive dashboard to present key insights after cleaning and explo
 - PBIX: [Download](./your_project_1.pbix)
 
 **Screenshots**
-![Dashboard page 1](./screenshots/page1.png)
-![Dashboard page 2](./screenshots/page2.png)
+![Dashboard page 11](./screenshots/page1.png)
+
 
 **Tools Used**
 - Microsoft Power BI
