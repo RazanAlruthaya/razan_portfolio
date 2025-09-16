@@ -109,6 +109,7 @@ footer{border-top:1px solid var(--stroke); margin-top:28px}
     </section>
 
     <!-- Skills -->
+
     <h2 id="skills" class="section-title">المهارات</h2>
     <div class="card">
       <h3 style="margin-top:0">Technical Skills</h3>
@@ -121,6 +122,16 @@ footer{border-top:1px solid var(--stroke); margin-top:28px}
         <div class="skill">Market Research<small>استبيانات • تحليل</small></div>
         <div class="skill">Project Mgmt<small>Agile • CAPM</small></div>
         <div class="skill">Presentation<small>Storytelling</small></div>
+        /* Force bigger height for SQL screenshot */
+.sql-card .shot-wrap {
+    height: 300px !important;   /* عدّل الرقم إذا أردت حجم أكبر أو أصغر */
+}
+.sql-card img {
+    object-fit: contain !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
       </div>
 
       <h3 style="margin-top:20px">Soft Skills</h3>
@@ -163,15 +174,16 @@ footer{border-top:1px solid var(--stroke); margin-top:28px}
         </div>
       </article>
 
-    <article class="project-card">
-  <div class="shot-wrap" style="height:260px">
-    <img src="assets/sql.png" alt="SQL result" style="object-fit:contain; width:100%; height:100%;">
+  <article class="project-card sql-card">
+  <div class="shot-wrap">
+    <img src="assets/sql.png" alt="SQL result">
   </div>
   <div class="project-body">
     <h3 class="project-title">SQL — درجات الطلاب</h3>
     <p class="project-desc">استعلام JOIN لربط الطلاب بالدرجات واستخراج نتائج قابلة للتقارير.</p>
   </div>
 </article>
+
 
 
     <!-- Contact (last) -->
@@ -256,16 +268,16 @@ footer{border-top:1px solid var(--stroke); margin-top:28px}
           <p class="project-desc">Pivot & PowerQuery aggregation with concise KPIs.</p>
         </div>
       </article>
-
-<article class="project-card">
-  <div class="shot-wrap" style="height:260px">
-    <img src="assets/sql.png" alt="SQL result" style="object-fit:contain; width:100%; height:100%;">
+<article class="project-card sql-card">
+  <div class="shot-wrap">
+    <img src="assets/sql.png" alt="SQL result">
   </div>
   <div class="project-body">
     <h3 class="project-title">SQL — Student Grades</h3>
     <p class="project-desc">JOIN query linking students and grades for reporting.</p>
   </div>
 </article>
+
 
 
 
