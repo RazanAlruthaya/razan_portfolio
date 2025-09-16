@@ -8,49 +8,40 @@
   <!-- Social preview -->
   <meta property="og:title" content="رزان عبدالله الرثيع — Data Analysis Portfolio" />
   <meta property="og:description" content="مشاريع تحليل بيانات باستخدام Excel وSQL وPower BI." />
-  <meta property="og:image" content="Screenshot2.png" />
   <meta property="og:url" content="https://razanalruthaya.github.io/razan_portfolio/" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <style>
     :root{
-      --bg:#ffffff;
-      --bg-alt:#f5f3fa;
-      --card:#ffffff;
-      --stroke:#dcd9e8;
-      --text:#1f1e24;
-      --muted:#6a6872;
-      --muted2:#9996a3;
-      --accent:#BD3978;
-      --accent2:#C480A7;
+      --bg:#ffffff; --bg-alt:#f5f3fa; --card:#ffffff; --stroke:#dcd9e8;
+      --text:#1f1e24; --muted:#6a6872; --muted2:#9996a3;
+      --accent:#BD3978; --accent2:#C480A7;
     }
     *{box-sizing:border-box}
     body{
-      margin:0;
-      font-family:"Tajawal","Cairo",system-ui,-apple-system,Segoe UI,Arial,sans-serif;
-      color:var(--text);
-      background:linear-gradient(180deg,var(--bg) 0%,var(--bg-alt) 100%);
+      margin:0; font-family:"Tajawal","Cairo",system-ui,-apple-system,Segoe UI,Arial,sans-serif;
+      color:var(--text); background:linear-gradient(180deg,var(--bg) 0%,var(--bg-alt) 100%);
     }
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
+    a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
 
     .topbar{height:6px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
     header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);
-      backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--stroke)}
+           backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--stroke)}
     .nav{max-width:1100px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between}
     .brand{display:flex;align-items:center;gap:10px}
     .brand img{height:34px}
     .nav a{margin-inline:8px;font-weight:700}
 
     .container{max-width:1100px;margin:auto;padding:28px 20px}
-    .hero{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;padding-top:34px}
-    @media(max-width:900px){.hero{grid-template-columns:1fr}}
+
+    /* Hero بدون صورة */
+    .hero{padding-top:34px}
     .hero h1{font-size:38px;margin:0 0 10px}
-    .hero p{color:var(--muted);margin:0 0 20px;font-size:18px}
+    .hero p{color:var(--muted);margin:0 0 18px;font-size:18px}
     .btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:12px;font-weight:700}
     .btn.secondary{background:var(--accent2)}
     .badge{display:inline-block;background:#e9e7f8;color:var(--text);border:1px solid var(--stroke);
-      padding:6px 10px;border-radius:999px;font-size:12px;margin:4px}
+           padding:6px 10px;border-radius:999px;font-size:12px;margin:4px}
 
     .section-title{font-size:26px;margin:34px 0 14px;color:#3f213f}
     .card{background:var(--card);border:1px solid var(--stroke);border-radius:16px;padding:18px}
@@ -72,7 +63,7 @@
   <header>
     <nav class="nav">
       <div class="brand">
-        <img src="logo.png" alt="Logo" onerror="this.style.display='none'">
+        <img src="assets/logo.png" alt="Logo" onerror="this.style.display='none'">
         <strong style="color:var(--accent)">رزان عبدالله الرثيع</strong>
       </div>
       <div>
@@ -86,89 +77,79 @@
 
   <main class="container">
 
+    <!-- HERO (بدون صورة) -->
     <section class="hero" id="home">
-      <div>
-        <h1>محفظة أعمال تحليل البيانات</h1>
-        <p>
-          أنا <strong>رزان عبدالله الرثيع</strong> (Razan Abdullah Alruthaya)  
-          خريجة <strong>إدارة أعمال</strong> أعمل على تحليل البيانات وبناء لوحات معلومات باستخدام
-          <strong>Excel</strong> و<strong>SQL</strong> و<strong>Power BI</strong>.
-        </p>
-        <a class="btn" href="#projects">عرض المشاريع</a>
-        <a class="btn secondary" style="margin-inline-start:8px" href="#contact">تواصل معي</a>
-        <div style="margin-top:12px">
-          <span class="badge">Excel</span>
-          <span class="badge">SQL</span>
-          <span class="badge">Power BI</span>
-        </div>
-      </div>
-      <div>
-        <img class="shot" src="Screenshot2.png" alt="Dashboard cover">
+      <h1>محفظة أعمال تحليل البيانات</h1>
+      <p>
+        أنا <strong>رزان عبدالله الرثيع</strong> (Razan Abdullah Alruthaya) — خريجة
+        <strong>إدارة أعمال</strong> أعمل على تحليل البيانات وبناء لوحات معلومات باستخدام
+        <strong>Excel</strong> و<strong>SQL</strong> و<strong>Power BI</strong>.
+      </p>
+      <a class="btn" href="#projects">عرض المشاريع</a>
+      <a class="btn secondary" style="margin-inline-start:8px" href="#contact">تواصل معي</a>
+      <div style="margin-top:12px">
+        <span class="badge">Excel</span><span class="badge">SQL</span><span class="badge">Power BI</span>
       </div>
     </section>
 
+    <!-- ABOUT -->
     <h2 class="section-title" id="about">من أنا</h2>
     <div class="card">
-      <p>
-        أمتلك خبرة في تنظيف البيانات، وكتابة استعلامات SQL واضحة، وتصميم لوحات Power BI تفاعلية
-        تساعد متخذي القرار على رؤية مؤشرات الأداء بوضوح.
-      </p>
+      <p>أهتم بتنظيف البيانات، وكتابة استعلامات SQL واضحة، وتصميم لوحات Power BI تفاعلية تُظهر مؤشرات الأداء وتدعم اتخاذ القرار.</p>
       <p class="muted">📍 الرياض، السعودية •
-         <a href="mailto:razanalruthaya@outlook.com">razanalruthaya@outlook.com</a></p>
+        <a href="mailto:razanalruthaya@outlook.com">razanalruthaya@outlook.com</a>
+      </p>
     </div>
 
     <div class="card ltr" style="margin-top:12px">
       <p>
         I am <strong>Razan Abdullah Alruthaya</strong>, a Business Administration graduate focusing on data cleaning,
-        SQL queries, and interactive Power BI dashboards to support decision-making.
+        SQL, and interactive Power BI dashboards that support decision-making.
       </p>
     </div>
 
+    <!-- SKILLS -->
     <h2 class="section-title" id="skills">المهارات</h2>
     <div class="grid cards-2">
-      <div class="card">
-        <h3>تقنية</h3>
-        <p class="muted">Excel (Pivot, PowerQuery)، SQL (JOINs, CTEs)، Power BI (DAX basics، Visualization)</p>
-      </div>
-      <div class="card">
-        <h3>أعمال</h3>
-        <p class="muted">تصميم مؤشرات الأداء، التحليل وإعداد التقارير، توصيل النتائج لأصحاب المصلحة</p>
-      </div>
+      <div class="card"><h3>تقنية</h3><p class="muted">Excel (Pivot, PowerQuery)، SQL (JOINs, CTEs)، Power BI (DAX basics, Visualization)</p></div>
+      <div class="card"><h3>أعمال</h3><p class="muted">تصميم مؤشرات الأداء، التحليل وإعداد التقارير، التواصل مع أصحاب المصلحة</p></div>
     </div>
 
+    <!-- PROJECTS -->
     <h2 class="section-title" id="projects">المشاريع</h2>
     <div class="grid cards-2">
 
       <article class="card">
-        <img class="shot" src="screenshot 1.png" alt="Power BI dashboard 1">
+        <img class="shot" src="assets/pbi1.png" alt="Power BI dashboard 1">
         <h3 style="margin:12px 0 6px">Power BI — تحليل أداء المبيعات</h3>
-        <p class="muted">لوحة تفاعلية لقياس الإيرادات والكميات ومؤشرات المنتجات الأعلى مبيعاً.</p>
+        <p class="muted">لوحة تفاعلية لقياس الإيرادات والكميات وأفضل المنتجات.</p>
         <p><a href="PowerBI-Project1/README.md">تفاصيل المشروع</a></p>
       </article>
 
       <article class="card">
-        <img class="shot" src="Screenshot2.png" alt="Power BI dashboard 2">
+        <img class="shot" src="assets/pbi2.png" alt="Power BI dashboard 2">
         <h3 style="margin:12px 0 6px">Power BI — متجر المبيعات</h3>
         <p class="muted">تحليلات مقارنة حسب المدينة والمنتج مع مؤشرات رئيسية ومرشّحات.</p>
         <p><a href="PowerBI-Project2/README.md">تفاصيل المشروع</a></p>
       </article>
 
       <article class="card">
-        <img class="shot" src="screenshot3.png" alt="Excel dashboard">
+        <img class="shot" src="assets/excel.png" alt="Excel dashboard">
         <h3 style="margin:12px 0 6px">Excel — لوحة مخزون السيارات</h3>
-        <p class="muted">لوحة Pivot وPower Query لمراقبة مؤشرات المخزون وأسعار المركبات.</p>
+        <p class="muted">Pivot وPower Query لمراقبة مؤشرات المخزون.</p>
         <p><a href="Excel-Project/README.md">تفاصيل المشروع</a></p>
       </article>
 
       <article class="card">
-        <img class="shot" src="Screenshot4.png" alt="SQL query result">
+        <img class="shot" src="assets/sql.png" alt="SQL query result">
         <h3 style="margin:12px 0 6px">SQL — تحليل درجات الطلاب</h3>
-        <p class="muted">استعلام JOIN يربط جداول الطلاب والدرجات لإظهار النتائج النهائية.</p>
+        <p class="muted">استعلام JOIN يربط جداول الطلاب والدرجات لإظهار النتائج.</p>
         <p><a href="SQL-Project/README.md">تفاصيل المشروع</a></p>
       </article>
 
     </div>
 
+    <!-- CONTACT -->
     <h2 class="section-title" id="contact">تواصل</h2>
     <div class="card">
       <p>متاحة لفرص عمل بدوام كامل أو جزئي، حضوريًا أو عن بُعد.</p>
@@ -180,11 +161,10 @@
     </footer>
   </main>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
+
 
 
 
