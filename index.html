@@ -18,6 +18,24 @@ body{
   color:var(--text); background:linear-gradient(180deg,var(--bg) 0%, var(--bg2) 100%);
 }
 a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+  /* ===== Force bigger, clear size for the SQL screenshot ===== */
+#sql-card-ar .shot-wrap,
+#sql-card-en .shot-wrap{
+  /* ألغِ نسبة 16:9 الافتراضية */
+  aspect-ratio: auto !important;
+
+  /* ثبّت ارتفاعًا أوضح للصورة */
+  height: 320px !important;   /* غيّريه 340/360px إذا بغيتي أكبر */
+}
+
+#sql-card-ar img,
+#sql-card-en img{
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;  /* اعرض الصورة كاملة بدون قص */
+  background: #fff;                /* خلفية بيضاء حول الصورة عند التناسب */
+}
+
 
 /* Header / Nav */
 header{position:sticky; top:0; z-index:10; background:rgba(255,255,255,.95);
@@ -174,7 +192,7 @@ footer{border-top:1px solid var(--stroke); margin-top:28px}
         </div>
       </article>
 
-  <article class="project-card sql-card">
+<article class="project-card" id="sql-card-ar">
   <div class="shot-wrap">
     <img src="assets/sql.png" alt="SQL result">
   </div>
@@ -183,6 +201,7 @@ footer{border-top:1px solid var(--stroke); margin-top:28px}
     <p class="project-desc">استعلام JOIN لربط الطلاب بالدرجات واستخراج نتائج قابلة للتقارير.</p>
   </div>
 </article>
+
 
 
 
@@ -268,7 +287,7 @@ footer{border-top:1px solid var(--stroke); margin-top:28px}
           <p class="project-desc">Pivot & PowerQuery aggregation with concise KPIs.</p>
         </div>
       </article>
-<article class="project-card sql-card">
+<article class="project-card" id="sql-card-en">
   <div class="shot-wrap">
     <img src="assets/sql.png" alt="SQL result">
   </div>
@@ -277,6 +296,7 @@ footer{border-top:1px solid var(--stroke); margin-top:28px}
     <p class="project-desc">JOIN query linking students and grades for reporting.</p>
   </div>
 </article>
+
 
 
 
