@@ -36,6 +36,7 @@ Create an interactive dashboard to present key insights after cleaning and explo
 **Tools Used**
 - Microsoft Power BI  
 - Power Query for data cleaning and transformation
+- [View Project](PowerBI-Project1)
 
 ### 4️⃣ # Power BI Project 2 – Data Cleaning, Analysis & Visualization
 
@@ -61,7 +62,7 @@ Build a second interactive dashboard focusing on data preparation and meaningful
 - Excel: Data cleaning, Pivot Tables, dashboards  
 - SQL: Joins, subqueries, database design  
 - Power BI: Data analysis, data modeling, interactive dashboards  
-
+- [View Project](PowerBI-Project2)
 ---
 
 ## 📬 Contact
